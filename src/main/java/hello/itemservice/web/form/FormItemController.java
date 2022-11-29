@@ -93,5 +93,11 @@ public class FormItemController {
         return "redirect:/form/items/{itemId}";
     }
 
+    @GetMapping("/{itemId}/delete")
+    public String delete(@PathVariable Long itemId) {
+        itemRepository.delete(itemId);
+        return "redirect:/form/items";
+    }
+
 }
 

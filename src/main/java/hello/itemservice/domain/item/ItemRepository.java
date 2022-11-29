@@ -38,6 +38,10 @@ public class ItemRepository {
         findItem.setDeliveryCode(updateParam.getDeliveryCode());
     }
 
+    public void delete(Long itemId) {
+        store.remove(itemId);
+    }
+
     public void clearStore() {
         store.clear();
     }
